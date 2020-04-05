@@ -5,6 +5,22 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'ajouter',
+    loadChildren: () => import('./plat/ajouter/ajouter.module').then( m => m.AjouterPageModule)
+  },
+  {
+    path: 'modifier',
+    loadChildren: () => import('./plat/modifier/modifier.module').then( m => m.ModifierPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 ];
 @NgModule({
